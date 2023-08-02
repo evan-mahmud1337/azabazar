@@ -1,0 +1,29 @@
+#!/opt/alt/python37/bin/python3 -sbb
+# -*- coding: utf-8 -*-
+# cloudlinux-selector Utility to check Cloudlinux license
+#
+# Copyright © Cloud Linux GmbH & Cloud Linux Software, Inc 2010-2019 All Rights Reserved
+#
+# Licensed under CLOUD LINUX LICENSE AGREEMENT
+# http://cloudlinux.com/docs/LICENSE.TXT
+
+from __future__ import print_function
+from __future__ import division
+from __future__ import absolute_import
+import sys
+
+from clselector.cl_selector import CloudlinuxSelector
+from clcommon.lib.cledition import lve_supported_or_exit
+
+
+@lve_supported_or_exit
+def main(argv):
+    """
+    Main run function
+    """
+    cll = CloudlinuxSelector()
+    return cll.run(argv)
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv[1:]))
