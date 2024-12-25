@@ -84,11 +84,11 @@ WSGI_APPLICATION = 'azabazar.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE'  : 'django.db.backends.mysql', # <-- UPDATED line 
-        'NAME'    : 'azabazar_database',                 # <-- UPDATED line 
-        'USER'    : 'root',                     # <-- UPDATED line with ----> 'azabazar_evan'
-        'PASSWORD': 'password',              # <-- UPDATED line with Azabazar12345
-        'HOST'    : 'localhost',                # <-- UPDATED line
+        'ENGINE'  : 'django.db.backends.mysql',
+        'NAME'    : 'azabazar_database',                
+        'USER'    : 'root',                    
+        'PASSWORD': 'password',              
+        'HOST'    : 'localhost',                
         'PORT'    : '3306',
     }
 }
